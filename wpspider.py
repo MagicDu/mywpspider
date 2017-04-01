@@ -77,7 +77,7 @@ def get_news(url,link,classname):
 	headers=setHeader(url)
 	bsObj=requests.session()
 	art=bsObj.get(link,headers=headers)
-	print(art.status_code)
+	#print(art.status_code)
 	bsObj=BeautifulSoup(art.content,'html.parser')
 	tit=bsObj.h1
 	if tit!=None:
@@ -90,6 +90,7 @@ def get_news(url,link,classname):
 	l=re.split(',',tags_list)
 	tags=[item for item in filter(lambda x:x != '', l)]
 	category="其他"
+	content=bsObj.find('div',{'class':classname})
 	#查找图片
 	a_tag=content.find('img')
 	if a_tag!=None and a_tag.attrs['src']!='':
