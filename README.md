@@ -31,3 +31,6 @@
     ```
     python3 wpspider.py
     ```
+
+###   可以自己实现Django配置
+![image](http://ws4.sinaimg.cn/large/0065GZmcgy1fjd3fb0bwjj30wi0ahglo.jpg)
