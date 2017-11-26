@@ -33,7 +33,7 @@ class News(object):
 #设置请求头
 def setHeader(url):
 	#抽取URL中的主机名
-	host=url.replace('http://','')
+	host=getHost(url)
 	length = len(user_agents)
 	index=random.randint(0,length-1)
 	user_agent = user_agents[index]

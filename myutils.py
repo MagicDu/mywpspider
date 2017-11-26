@@ -7,9 +7,18 @@ from email.mime.text import MIMEText
 from email.header import Header
 import smtplib
 import traceback
-import os
+import os,re
 
 from conf import readEmailConf
+
+# 根据url 获取主机名
+def getHost(url):
+    reg = r'^https?:\/\/([a-z0-9\-\.]+)[\/\?]?'
+    m = re.match(reg, url)
+    uri = m.groups()[0] if m else ''
+    host=uri[uri.rfind('.', 0, uri.rfind('.')) + 1:]
+    return host
+
 
 #加载user_agents配置文件
 def load_user_agent():
