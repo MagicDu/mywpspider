@@ -1,4 +1,8 @@
 ## 增强版Python爬虫+WordPress
+#### load_user_agent   暂时存在bug 还没有时间改哈
+
+
+
 与之前完成的单站点爬虫测试相比，现在通过从数据库读取爬取规则，做了多站点适配
 而且爬虫的部署比以前更加简单。
 站点配置在example文件夹数据库有示例
@@ -9,9 +13,9 @@
     1.增加数据库配置
     2.增加WordPress站点配置
     站点信息请加上xmlrpc.php
-    ```
+    ​```
     website=http://itfin.jj.cn/xmlrpc.php
-    ```
+    ​```
     3.增加email配置
 
 #### 创建数据库
@@ -28,9 +32,9 @@
 
 #### 运行爬虫
 
-    ```
+    ​```
     python3 wpspider.py
-    ```
+    ​```
 
 ###   可以自己实现Django配置
 http://ws4.sinaimg.cn/large/0065GZmcgy1fjd3fb0bwjj30wi0ahglo.jpg
